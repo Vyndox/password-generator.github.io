@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="lock-icon.jpg" type="image/jpg">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title-box">
+            <h1>Password Generator</h1>
+            <div class="description-container">
+                <div class="description">
+                    Generate secure passwords based on your preferences. 
+                    Max Password Length is 50.
+                    Minimum Password Length is 6.
+
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="length">Length:</label>
+            <input type="number" id="length" min="6" max="50" value="12">
+        </div>
+        <div class="form-group">
+            <label for="uppercase">Include Uppercase Letters:</label>
+            <input type="checkbox" id="uppercase" checked>
+        </div>
+        <div class="form-group">
+            <label for="numbers">Include Numbers:</label>
+            <input type="checkbox" id="numbers" checked>
+        </div>
+        <div class="form-group">
+            <label for="symbols">Include Symbols:</label>
+            <input type="checkbox" id="symbols" checked>
+        </div>
+        <button id="generate-btn">Generate Password</button>
+        <div class="password-container" id="password-container">
+            <input type="text" id="password" readonly>
+            <button id="copy-btn">Copy the Password</button>
+        </div>
+        <div class="warning-message" id="warning-message">
+            The entered length is too long. Please enter a number less than or equal to 50.
+        </div>
+        <div class="second-warning-message" id="second-warning-message">
+            The entered length is too short. Please enter a number greater than or equal to 6.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
